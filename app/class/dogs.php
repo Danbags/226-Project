@@ -21,7 +21,7 @@
 
         // GET ALL
         public function getDogs(){
-            $sqlQuery = "SELECT id, name, owner, age, breed, FROM " . $this->db_table . "";
+            $sqlQuery = "SELECT id, name, owner, age, breed FROM " . $this->db_table . "";
             $stmt = $this->conn->prepare($sqlQuery);
             $stmt->execute();
             return $stmt;
@@ -85,19 +85,19 @@
 
         // UPDATE
         public function updateDog(){
+
             $sqlQuery = "UPDATE
-                        ". $this->db_table ."
+                        ".$this->db_table ."
                     SET
                         name = :name, 
                         owner = :owner, 
                         age = :age, 
-                        breed = :breed, 
+                        breed = :breed 
                   
                     WHERE 
                         id = :id";
         
             $stmt = $this->conn->prepare($sqlQuery);
-        
             $this->name=htmlspecialchars(strip_tags($this->name));
             $this->owner=htmlspecialchars(strip_tags($this->owner));
             $this->age=htmlspecialchars(strip_tags($this->age));

@@ -23,6 +23,7 @@ $item->owner = $data->owner;
 $item->age = $data->age;
 $item->breed = $data->breed;
 
+
 if($item->updateDog()){
     echo json_encode("Dog data updated.");
 } else{
