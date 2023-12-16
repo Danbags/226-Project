@@ -46,17 +46,17 @@ services:
 
 
 
-#  mydemoreactimage:
-#    image: mydemoreactimage
-#    container_name: mydemoreactimage
-#    build:
-#      context: .
-#      dockerfile: Dockerfile
-##    volumes:
-##      - ./frontend/react-docker:/app
-#    ports:
-#      - 3001:3000
-#    environment:
-#      - WATCHPACK_POLLING=true
+  mydemoreactimage:
+    image: mydemoreactimage
+    container_name: mydemoreactimage
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./frontend/react-docker:/app
+    ports:
+      - 3001:3000
+    environment:
+      - WATCHPACK_POLLING=true
 volumes:
   dbdata:
